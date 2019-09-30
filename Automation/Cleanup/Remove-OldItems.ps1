@@ -13,13 +13,15 @@ Function Remove-OldItems
 $TimeFrame = (Get-Date).AddDays(-$Days)
 
 Get-ChildItem -Path "\\$Server\C$\Users\$User\Temp" -Recurse |
-    Where-Object{$_.LastWriteTime -le $TimeFrame} | Remove-Item
+    Where-Object{$_.LastWriteTime -le $TimeFrame} | Remove-Item -Force
 }
 
 # Specify the server name, user and number of days and this function will delete those files older than specified days
-Remove-OldItems -Server DEVFILE01 -User TempUser -Days 4
+# Remove old files from DEVFILE01 server - TempUser account
+	Remove-OldItems -Server DEVFILE01 -User TempUser -Days 4
 
-Remove-OldItems -Server DEVFILE02 -User TempUser2 -Days 5
+# Remove old files from DEVFILE02 server - TempUser2 account
+	Remove-OldItems -Server DEVFILE02 -User TempUser2 -Days 5
 
         
 
