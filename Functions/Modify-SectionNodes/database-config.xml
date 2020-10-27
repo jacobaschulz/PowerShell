@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<sections>
+  <section name="login">
+    <item key="database" value="database_name" />
+    <item key="server" value="server,port" />
+  </section>
+</sections>
