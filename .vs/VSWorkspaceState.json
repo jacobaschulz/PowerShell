@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Automation",
+    "\\Automation\\Cleanup",
+    "\\Automation\\Monitoring"
+  ],
+  "SelectedNode": "\\Automation\\Monitoring\\Get-ZeroKBFiles.ps1",
+  "PreviewInSolutionExplorer": false
+}
