@@ -3,6 +3,7 @@ $Final = 'C:\Users\jacob\Documents\Web-Split-File-Test\Final'
 $SubImport = get-childitem $Import\*
 $Extension = ''
 
+# Append timestamp to each filename for unique values
 Foreach($Subfolder in $SubImport) {
     Get-ChildItem -Path $Subfolder -Recurse -File | Where-Object {$_.Extension -eq $Extension} |
         Rename-Item -NewName {$_.BaseName + "-" + (Get-Date -Format "yyyyMMdd-HHmmssffff") + $_.Extension}
