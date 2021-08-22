@@ -19,7 +19,7 @@ Foreach($Subfolder in $SubImport) {
     Get-ChildItem -Path $Subfolder -Recurse -Directory -Exclude *.* | Remove-Item -Recurse 
     }
 
-# Folder Reorganization
+# Folder Reorganization script based on number of files per folder
 $FilesPerFolder = 2
 $inc = 0;
 $FolderNumber = 1;
@@ -39,7 +39,6 @@ Foreach($Subfolder in $SubImport) {
         }
     }
 }
-
 
 # Move reorganized folders
 Foreach($Subfolder in $SubImport) {
