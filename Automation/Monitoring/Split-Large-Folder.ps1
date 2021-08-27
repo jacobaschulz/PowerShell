@@ -3,6 +3,19 @@ $Final = 'C:\Users\jacob\Documents\Web-Split-File-Test\Final'
 $SubImport = get-childitem $Import\*
 $Extension = ''
 
+# Create folders if they don't exist
+If((Test-Path $Import) -eq $false) {
+    New-Item -Path $Import -ItemType Directory}
+    Else {
+    Write-Host -ForegroundColor Yellow "$Import exists."
+    }
+
+If((Test-Path $Final) -eq $false) {
+    New-Item -Path "$Final" -ItemType Directory}
+    Else {
+    Write-Host -ForegroundColor Yellow "$Final exists."
+    }
+
 # Append timestamp to each filename for unique values
 Foreach($Subfolder in $SubImport) {
     Get-ChildItem -Path $Subfolder -Recurse -File | Where-Object {$_.Extension -eq $Extension} |
