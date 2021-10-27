@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Automation",
-    "\\Automation\\Cleanup",
-    "\\Automation\\Monitoring"
+    "\\Functions",
+    "\\Functions\\Comparisons"
   ],
-  "SelectedNode": "\\Automation\\Monitoring\\Get-ZeroKBFiles.ps1",
+  "SelectedNode": "\\Functions\\Comparisons\\Compare and move non-matching files.ps1",
   "PreviewInSolutionExplorer": false
 }
