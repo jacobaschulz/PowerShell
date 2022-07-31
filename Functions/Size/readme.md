@@ -1,4 +1,4 @@
-## Write Foreach for Folder Sizes
+## Write Foreach for Folder Sizes.ps1
 
 ### Usage: Run this to ouptut a set of commands for multiple subdirectories
 
